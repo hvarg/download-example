@@ -1,0 +1,51 @@
+mic   _utils.py          INFO     Log file created
+mic   _utils.py          INFO     OS: {'name': 'Darwin', 'data': {'version': 'Darwin Kernel Version 17.7.0: Thu Jun 21 22:53:14 PDT 2018; root:xnu-4570.71.2~1/RELEASE_X86_64', 'release': '17.7.0', 'platform': 'Darwin-17.7.0-x86_64-i386-64bit'}}
+mic   _utils.py          INFO     MIC Version: 1.3.6
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'start', 'command_parameters': {'name': {'value': 'download-example', 'type': 'str'}, 'image': {'value': None, 'type': 'NoneType'}}}
+mic   initialization.py  DEBUG    detecting framework(s): [<Framework.GENERIC: ('general', 'mintproject/generic:latest')>]
+mic   initialization.py  DEBUG    OS name: darwin
+mic   docker.py          INFO     Downloading and building base docker image
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/hvargas/ISI/fire-example/download-example/mic/mic.yaml', 'data': {'key': 'name', 'value': 'download-example'}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/hvargas/ISI/fire-example/download-example/mic/mic.yaml', 'data': {'key': 'docker_image', 'value': 'download-example:latest'}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/hvargas/ISI/fire-example/download-example/mic/mic.yaml', 'data': {'key': 'framework', 'value': <Framework.GENERIC: ('general', 'mintproject/generic:latest')>}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/Users/hvargas/ISI/fire-example/download-example/mic/mic.yaml', 'data': {'key': 'container_name', 'value': 'download-example_6d5e646d'}}
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'trace', 'command_parameters': {'invocation_command': {'value': ('sh', 'download-image.sh'), 'type': 'tuple'}, 'continu': {'value': None, 'type': 'NoneType'}, 'overwrite': {'value': None, 'type': 'NoneType'}}}
+mic   commands.py        DEBUG    Append mode: None
+mic   commands.py        INFO     trace done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'inputs', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}, 'custom_inputs': {'value': (), 'type': 'tuple'}}}
+mic   commands.py        DEBUG    Inputs found from reprozip: ['/tmp/mint/download-image.sh', '/tmp/mint/QUIC-Fire.png']
+mic   reprozip.py        DEBUG    Adding executable: download-image.sh
+mic   commands.py        DEBUG    code files found from reprozip: ['/tmp/mint/download-image.sh']
+mic   commands.py        INFO     Ignoring the config as an input: /tmp/mint/download-image.sh
+mic   commands.py        INFO     Input added: QUIC-Fire.png
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'inputs', 'value': {'quic-fire_png': {'path': 'QUIC-Fire.png', 'format': 'png'}}}}
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'code_files', 'value': {'download-image_sh': {'path': 'download-image.sh', 'format': 'sh'}}}}
+mic   commands.py        INFO     inputs done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'outputs', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}, 'custom_outputs': {'value': (), 'type': 'tuple'}}}
+mic   commands.py        DEBUG    Outputs found from reprozip: []
+mic   config_yaml.py     DEBUG    Writing to spec: {'file': '/tmp/mint/mic/mic.yaml', 'data': {'key': 'outputs', 'value': {}}}
+mic   commands.py        INFO     outputs done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'wrapper', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}}}
+mic   commands.py        INFO     Generating wrapper code
+mic   reprozip.py        DEBUG    Pre runner code: ''
+mic   reprozip.py        DEBUG    Runner code: '\npushd .\nsh download-image.sh\npopd'
+mic   initialization.py  DEBUG    run file rendered
+mic   initialization.py  DEBUG    io file rendered
+mic   commands.py        INFO     wrapper done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'run', 'command_parameters': {'mic_file': {'value': '/tmp/mint/mic/mic.yaml', 'type': 'str'}}}
+mic   executor.py        INFO     Running: ./run   -o1 quic-fire_png.png 
+mic   executor.py        DEBUG    exe_arr: ['./run', '-o1', 'quic-fire_png.png']
+mic   commands.py        INFO     Run passed
+mic   commands.py        INFO     run done
+mic   commands.py        INFO     start done
+mic   _utils.py          INFO     <=================>
+mic   _utils.py          INFO     Command: {'name': 'upload', 'command_parameters': {'mic_file': {'value': '/Users/hvargas/ISI/fire-example/download-example/mic/mic.yaml', 'type': 'str'}, 'profile': {'value': 'default', 'type': 'str'}, 'model_configuration': {'value': True, 'type': 'bool'}, 'data_transformation': {'value': None, 'type': 'NoneType'}}}
+mic   github.py          INFO     Creating the git repository
+mic   github.py          INFO     Compressing code
+mic   github.py          INFO     Creating a new commit

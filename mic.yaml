@@ -1,0 +1,17 @@
+step: 1
+name: download-example
+docker_image: download-example:latest
+framework: !!python/object/apply:mic.constants.Framework
+- !!python/tuple
+  - general
+  - mintproject/generic:latest
+container_name: download-example_6d5e646d
+inputs: {}
+outputs:
+  quic-fire_png:
+    path: QUIC-Fire.png
+    format: png
+code_files:
+  download-image_sh:
+    path: download-image.sh
+    format: sh
